@@ -1,4 +1,5 @@
-# README
+# Tourpal
+[![Build Status](https://travis-ci.org/rogerluo410/tourpal.svg?branch=master)](https://travis-ci.org/rogerluo410/tourpal)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
