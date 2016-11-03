@@ -1,11 +1,8 @@
-require 'grape-swagger'
-
 module API
   module V1
     class Base < Grape::API
       format :json
       helpers API::Helpers
-      add_swagger_documentation
 
       rescue_from :all do |e|
         case e
@@ -15,6 +12,8 @@ module API
           error_response({:status=>500, :message=>"服务器错误"})
         end
       end
-    end
-  end
-end
+
+      mount API::V1::Resources::BackendBase
+    end # end of class Base
+  end # end of module V1
+end # end of module API
